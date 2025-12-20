@@ -3,8 +3,8 @@ import random
 from word_data import word_list, get_same_category_words
 
 def weighted_imposter_count(players):
-    options = [1, 2, 3, 4, 5]
-    weights = [75, 18, 3, 3, 1]
+    options = [1, 2, 3, 4, 5, 6, 7, 8]
+    weights = [40, 18, 13, 8, 1, 10, 10, 0]
     count = random.choices(options, weights=weights, k=1)[0]
     return min(count, players)
 
@@ -36,4 +36,5 @@ def create_game(players, difficulty):
         "imposters_remaining": imposters_count,
         "current_player": starting_player
     }
+
 
